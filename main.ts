@@ -1,17 +1,16 @@
 input.onSound(DetectedSound.Quiet, function () {
     basic.showIcon(IconNames.Asleep)
-    basic.showNumber(input.soundLevel())
-    basic.pause(100)
+    basic.showIcon(IconNames.Surprised)
+    basic.showIcon(IconNames.Happy)
 })
 input.onButtonPressed(Button.A, function () {
-    basic.showIcon(IconNames.Happy)
     basic.showNumber(input.soundLevel())
     basic.pause(100)
 })
 input.onSound(DetectedSound.Loud, function () {
     basic.showIcon(IconNames.Angry)
-    basic.showNumber(input.soundLevel())
-    basic.pause(100)
+    basic.showIcon(IconNames.Surprised)
+    basic.showIcon(IconNames.Happy)
 })
 let Vmin = 0
 input.setSoundThreshold(SoundThreshold.Quiet, Vmin)
